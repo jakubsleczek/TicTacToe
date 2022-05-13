@@ -1,16 +1,14 @@
 #include <iostream>
 #include <cstdlib>
+
 const void display(char boxes[9]);
 
-
 int main(){
-
 char boxes[9] {'1','2','3','4','5','6','7','8','9'};
-bool playerNumber{0};
-bool nextRound{1};
+bool playerNumber{false};
+bool nextRound{true};
 int number;
-int i = 0;
-
+int movesCounter = 0;
 do{
 system("clear");
 display(boxes);
@@ -25,7 +23,7 @@ else if (boxes[number-1]=='o' || boxes[number-1]=='x'){
     std::cout<<"*********Already taken! Try again*********\n\n";
     }
 else{
-    i++;
+    movesCounter++;
     if(playerNumber)
         boxes[number-1]='o';
     else
@@ -40,18 +38,15 @@ else{
         nextRound = !nextRound;
         }
     playerNumber = !playerNumber;
-
 }
-if(i==9 && nextRound==1){
+if(movesCounter==9 && nextRound==true){
 system("clear");
 std::cout<<"*********It's a draw!*********\n\n";
 nextRound = !nextRound;
 }
-
 }
 while(nextRound);
 display(boxes);
-
 return 0;
 }
 
@@ -69,5 +64,4 @@ std::cout<<"-----|-----|-----"<<std::endl;
 std::cout<<"     |     |     "<<std::endl;
 std::cout<<"  "<<boxes[6]<<"  |  "<<boxes[7]<<"  |  "<<boxes[8]<<"  "<<std::endl;
 std::cout<<"     |     |     "<<std::endl;
-
 }
