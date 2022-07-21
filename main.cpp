@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 
-const void display(char boxes[9]);
+void display(const char *boxes);
 
 int main(){
 char boxes[9] {'1','2','3','4','5','6','7','8','9'};
@@ -50,7 +50,7 @@ display(boxes);
 return 0;
 }
 
-const void display(char boxes[9]){
+void display(const char *boxes){
 std::cout<<"\n\tTic Tac Toe\n\n";
 std::cout<<"Player 1 <"<<"x"<<">\tPlayer 2 <"<<"o"<<">\n\n";
 std::cout<<"     |     |     "<<std::endl;
