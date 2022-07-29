@@ -1,3 +1,3 @@
 # TicTacToe
 Simple Tic Tac Toe game
-App developed for Linux Mint system
+Code woroks for Linux and Windows systems.
