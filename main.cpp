@@ -69,6 +69,6 @@ std::cout<<"     |     |     "<<std::endl;
 }
 
 void refresh(){
-//system("clear"); //linux
+system("clear"); //linux
 system("cls"); //windows
 }
