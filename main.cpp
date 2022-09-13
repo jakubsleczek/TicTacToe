@@ -69,6 +69,10 @@ std::cout<<"     |     |     "<<std::endl;
 }
 
 void refresh(){
+#ifdef __unix__
 system("clear"); //linux
+#endif
+#ifdef _WIN32
 system("cls"); //windows
+#endif
 }
